@@ -39,7 +39,7 @@ jobs:
           aws-region: ${{ vars.PRIVATEAWS_REGION }}
 
       - name: Login to Amazon ECR
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@v1
 
       - name: Deploy staging with push to ECR
         if: ${{ inputs.environment }} == 'Staging'
